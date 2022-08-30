@@ -1,5 +1,3 @@
-
-
 function board(size){
     let container = document.querySelector('.container');
     let squares = container.querySelectorAll("div")
@@ -13,6 +11,10 @@ function board(size){
         pixels.style.backgroundColor = "white";
         container.insertAdjacentElement('beforeend' , pixels) 
     }
+}
+
+function changeSize(input){
+    board(input);
 }
   
 let color = 'black';  //default
@@ -39,12 +41,8 @@ function getRandomColor() {
     return color;
   }
   
-let rangeValue = document.getElementById('rangeValue').value;
-function changeSize(input){
-    board(input);
-    console.log(rangeValue)
-}
 
+// function for button black
 let btnBlack = document.getElementById('black');
 btnBlack.addEventListener('click',()=>{
     changeColor('black');
@@ -52,6 +50,7 @@ btnBlack.addEventListener('click',()=>{
     setTimeout(() => btnBlack.classList.remove('button-glow'), 100);
 })
 
+//function for button eraser
 let btnWhite = document.getElementById('white');
 btnWhite.addEventListener('click',()=>{
     changeColor('white');
@@ -59,6 +58,7 @@ btnWhite.addEventListener('click',()=>{
     setTimeout(() => btnWhite.classList.remove('button-glow'), 100);
 })
 
+//function for button randon
 let btnRandom = document.getElementById('random')
 btnRandom.addEventListener('click',()=>{
     changeColor('random');
@@ -66,6 +66,7 @@ btnRandom.addEventListener('click',()=>{
     setTimeout(() => btnRandom.classList.remove('button-glow'), 100);
 })
 
+//function for button clear
 let btnClear = document.getElementById('clear')
 btnClear.addEventListener('click',()=>{
     let container = document.querySelector('.container');
@@ -75,7 +76,7 @@ btnClear.addEventListener('click',()=>{
     setTimeout(() => btnClear.classList.remove('button-glow'), 100);
 })
 
-
+// input range 
 let slider = document.querySelector('#slider');
 let screenDisp = document.querySelector('#rangeValue');
 slider.addEventListener('input' , ()=> {
