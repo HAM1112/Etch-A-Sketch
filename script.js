@@ -31,8 +31,8 @@ function changeColor(choice) {
 }
 
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
+    let letters = '0123456789ABCDEF';
+    let color = '#';
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
@@ -44,3 +44,10 @@ function changeSize(input){
     board(input);
 }
 
+
+let clear = document.getElementById('clear')
+clear.addEventListener('click',()=>{
+    let container = document.querySelector('.container');
+    let squares = container.querySelectorAll("div")
+    squares.forEach((div) => div.style.backgroundColor = 'white')
+})
