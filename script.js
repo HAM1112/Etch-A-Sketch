@@ -76,12 +76,9 @@ btnClear.addEventListener('click',()=>{
 })
 
 
-
-
-
 let slider = document.querySelector('#slider');
 let screenDisp = document.querySelector('#rangeValue');
 slider.addEventListener('input' , ()=> {
     let val = document.getElementById('slider').value;
-    screenDisp.textContent = val;
+    screenDisp.textContent = `${val} X ${val}`;
 })
