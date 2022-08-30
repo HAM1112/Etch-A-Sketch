@@ -16,16 +16,10 @@
     <div class="main">
    
         <div class="options">
-            <input 
-                type="range" 
-                name="Pixelsize" 
-                id="rangebar" 
-                min="1" 
-                max="64" 
-                step="1">
-            <button id="clear">Clear</button>
-            <button id="black"></button>
-            <button id="random">Random colors</button>
+            <input type="text" placeholder="Board Size" onchange='changeSize(this.value)'>
+            <button id="black" onclick="changeColor('black')">Black</button>
+            <button id="clear" onclick="changeColor('white')">Eraser</button>
+            <button id="random" onclick="changeColor('random')">Random colors</button>
         </div>
 
         <div class="container"></div>

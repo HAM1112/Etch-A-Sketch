@@ -1,7 +1,9 @@
+*{
+    color:#E94560;
+}
 
 body{
     background-color: #1A1A2E;
-    color: #E94560;
 }
 
 h1{
@@ -34,3 +36,24 @@ h1{
     flex-direction: column;
 }
 
+.main > .options > input{
+    background-color: #0F3460;
+    border: 2px solid #16213E;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.main > .options > button{
+    background-color: #0F3460;
+    border: 2px solid #16213E;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.container div {
+    border: 2px solid #E94560;
+}
