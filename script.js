@@ -16,8 +16,9 @@ function board(size){
     }
 }
 
-board(16);
+//board(16);
 
-function changeSize(){
 
-}
+// function changeSize(input){
+
+// }
